@@ -1,0 +1,24 @@
+architecture: edsr
+scale: 4
+features: 48
+blocks: 8
+residual_scale: 0.1
+patch_size: 32
+batch_size: 8
+workers: 0
+repeats: 20
+epochs: 60
+lr: 0.0002
+loss: charbonnier
+perceptual_weight: 0.0
+degradation: realistic-synthetic
+amp: true
+patience: 10
+checkpoint_every: 5
+tile_size: 128
+seed: 42
+device: cuda
+manifest: datasets/processed/div2k-synthetic.json
+output: runs/edsr-realistic-synthetic-x4-seed42
+
+

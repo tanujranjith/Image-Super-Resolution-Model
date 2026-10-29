@@ -1,0 +1,36 @@
+architecture: edsr
+scale: 2
+features: 48
+blocks: 8
+residual_scale: 0.1
+patch_size: 48
+batch_size: 12
+workers: 0
+decode_threads: 2
+prefetch_batches: 2
+sampling: epoch-index-v1
+max_decode_pixels: 16000000
+repeats: 1
+epochs: 60
+lr: 0.0002
+loss: l1
+perceptual_weight: 0.0
+degradation: bicubic
+amp: true
+grad_clip: 1.0
+patience: 10
+checkpoint_every: 5
+tile_size: 128
+seed: 42
+device: cuda
+manifest: datasets/large/processed/training.json
+output: runs/edsr-large-x2-seed42
+inference_manifest: datasets/processed/div2k.json
+manifest_sha256: 6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9
+benchmarks:
+- name: div2k-official
+  manifest: datasets/processed/div2k.json
+  sha256: 184255cb609a3de216c7a5d0ccbe947982ea16a9ed1d8571fb5626d225769569
+- name: lsdir-heldout
+  manifest: datasets/large/processed/lsdir-heldout.json
+  sha256: 542510b9f0943b2a1b4b568bb50c17ac6c8ced935160e69248cc47de17005f32

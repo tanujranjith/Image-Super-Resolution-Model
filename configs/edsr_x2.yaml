@@ -1,0 +1,25 @@
+architecture: edsr
+scale: 2
+features: 48
+blocks: 8
+residual_scale: 0.1
+patch_size: 48
+batch_size: 12
+workers: 0
+repeats: 20
+epochs: 60
+lr: 0.0002
+loss: l1
+perceptual_weight: 0.0
+degradation: bicubic
+amp: true
+grad_clip: 1.0
+patience: 10
+checkpoint_every: 5
+tile_size: 128
+seed: 42
+device: cuda
+manifest: datasets/processed/div2k.json
+output: runs/edsr-x2-seed42
+
+

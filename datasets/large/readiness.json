@@ -1,0 +1,218 @@
+{
+  "status": "training_approval_revoked_by_user_stop",
+  "implementation_ready": true,
+  "approval_required": true,
+  "training_started": false,
+  "tests_passed": 80,
+  "tests_skipped": 1,
+  "training_manifest_sha256": "6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9",
+  "heldout_manifest_sha256": "542510b9f0943b2a1b4b568bb50c17ac6c8ced935160e69248cc47de17005f32",
+  "original_div2k_manifest_sha256": "184255cb609a3de216c7a5d0ccbe947982ea16a9ed1d8571fb5626d225769569",
+  "config_hashes": {
+    "configs/edsr_large_x2.yaml": "6cfc40a64db2c5abce5a165a0c73aa338418791cfa6e4d4cb954e335a55f3084",
+    "configs/edsr_large_x4.yaml": "6aaf5f496bb75ac4e6e9092ad4e1c569dd58bd1594b7947bb433c5f9033b7115"
+  },
+  "validated_source_hashes": {
+    "superres/acquire.py": "a24527ba7b45d13d21637d38eaabd7aa1c56b6c4867c9b5f6d4346df60a66e0f",
+    "superres/budget.py": "0cc8cca66a86bc590343ea0e4b8d8f05ee987fbfedab2762eb35d314b203f6b8",
+    "superres/common.py": "eb2311d208c29629f4ae7c8efc8e6e20b59be804c942ae85e496f398e3988ed3",
+    "superres/compare.py": "0d8828dcaf099e227d4886550882620513ddde6c314a510a2237f21b30c5d426",
+    "superres/data.py": "31f9a606cd1d9da9eb4c1ac7d7d78d992ce4d9afbaa0078d78932f90c7214910",
+    "superres/duplicates.py": "fda62f9a50eddc5a93e18e2e8d984f3185f6ca1cad10f17f5f0859b16749c138",
+    "superres/evaluate.py": "53fbf39afa59debbd4151b009ed3fb5439ed8a2f18f5cfb7d97eb369e9d42172",
+    "superres/export.py": "e7376154ba8bf32d003753bd199e3df453f890035e460ada86798df119aa45f5",
+    "superres/inference.py": "dacf8b7c692c169783dd18b2f46ef8c8408479a08898526cb8a0f0b63f8c6528",
+    "superres/large_acquire.py": "29d200e8b63fd5a111e1d126f912bc038e4bd06d8bd00b13ead4fead5130a88b",
+    "superres/large_prepare.py": "038f953aaae6e66825377a5358e7f1920d65922b4fd3c4d370347e3e877688f5",
+    "superres/metrics.py": "bf564049caa4291040b486bb06b0c16f9bac7fe2fc0ca2a0f283bc878da79df9",
+    "superres/models.py": "38f94ac4cdd199672db17718f5414dc241a0e81798a200bf34d379899db27b41",
+    "superres/prefetch.py": "d9c552bbd899f78731afbfd3cb9efbd0e4eca903f651e57ce58a1cb7286c5b33",
+    "superres/prepare.py": "a8ba69101cba617bb0c955d1ae8ff3cf36cbf40a0437fd7ae2fbe61954de7db7",
+    "superres/train.py": "0b78dd31df99585eb81aabc235c7590a86b9ece27df54059ebce16ee31dd2c6a",
+    "superres/__init__.py": "e5982084cf22516076e89575672941e900f4909edb2f41917ba1ec8a27db25bb",
+    "scripts/overnight.py": "95560e9be0b6c60490036e4412ad2b390b00e400dae314d7920a1195193c69c7",
+    "scripts/train-large.ps1": "1763b0d05e6edf4887fe6fe300c6f1f6e16b5a6f5b3371f0bade6d45c8270c0e",
+    "scripts/validate_large.py": "42ec69a673acee957685af1a950299f4f4827f9268ec622069c17cf6c3cbd4b3",
+    "scripts/benchmark_loader.py": "38f6b521dbb2021b6afc56276cf3b8536578a95e133a5a9da84cedc48610179d",
+    "scripts/validate_loader.py": "2cd5c6e5651796c5f0f6637235519dc4c5385f528ca8ff0c6246888394127613",
+    "tests/test_loading.py": "1ba2f65a2c6b01f84f44d0eafee1d6abf7c35d3f6c32b17305a7a3755801e2fd",
+    "scripts/approved_run.py": "9afee24c50dbb15e7fb24ddb102d62489acb7526222ad121823fce3c4bd6e486",
+    "scripts/scheduled_resume.py": "05bd6dfb6ad51eac6bfaf37d83be439ab24aa0ad716b50df5bdf04df3f86a68b",
+    "scripts/test_scheduled_resume.py": "e4e50f56b2e5bd32355afc364c585005d95a67c161d765878900171ff0877092",
+    "scripts/extend_window.py": "8ab7f6ff7e2ac32ad4d72848f0c43a646a798ffb5a3c632b94623b2722053391",
+    "scripts/test_extend_window.py": "ba971595932e109a0abf69a354616812537be93d8affc50042e4b4ecf9b17d98",
+    "scripts/priority_resume.py": "e59e5fa120b468ec40c173ff5216da3eed2a22988c07c6a96ae2c64b76f87de8",
+    "scripts/test_priority_resume.py": "d5b0468d28f58a7753cde663071f439351d2957951b66ef6a90173cf732e3747"
+  },
+  "data_report": {
+    "phase": "data_prepared",
+    "training_started": false,
+    "kaggle_ref": "parampandya0310/hr-image-denoising-lsdir",
+    "kaggle_version": 1,
+    "acquired_scenes": 30250,
+    "verified_lsdir_scenes": 30250,
+    "primary_splits": {
+      "train": 30749,
+      "val": 50,
+      "test": 100
+    },
+    "primary_training_sources": {
+      "div2k": 750,
+      "lsdir-kaggle": 29999
+    },
+    "lsdir_heldout_splits": {
+      "val": 125,
+      "test": 125
+    },
+    "distinct_retained_scenes": 31149,
+    "duplicate_groups": 31136,
+    "excluded_scenes": 1,
+    "exclusion_reasons": {
+      "byte-identical duplicate": 1
+    },
+    "training_manifest_sha256": "6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9",
+    "heldout_manifest_sha256": "542510b9f0943b2a1b4b568bb50c17ac6c8ced935160e69248cc47de17005f32",
+    "original_div2k_manifest_sha256": "184255cb609a3de216c7a5d0ccbe947982ea16a9ed1d8571fb5626d225769569",
+    "raw_hr_bytes": 56640253584,
+    "condition": "pillow-bicubic-synthetic",
+    "checks": {
+      "whole_scene_groups_isolated": true,
+      "official_lsdir_validation_not_used_for_training": true,
+      "original_manifests_unmodified": true
+    },
+    "limitations": "Exact/full/mirror perceptual hashes cannot prove absence of arbitrary crops or repeated scenes. New data is clean HR with synthetic bicubic LR, not real camera LR. Kaggle mirror license does not override original academic research terms. Mirror validation provenance is not independently authenticated; it is not an official hidden-test benchmark."
+  },
+  "checks": {
+    "independent_exact_and_phash_split_isolation": true,
+    "acquired_file_size_and_mtime_unchanged_since_crc_sha_decode_checks": true,
+    "official_validation_excluded_from_training": true,
+    "both_scales_pair_geometry_and_scene_identity": true,
+    "original_div2k_manifest_unchanged": true,
+    "cpu_actual_hr_forward_passes": [
+      {
+        "scale": 2,
+        "scene": "div2k-0001",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "lsdir-train-0000001",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "div2k-0801",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "lsdir-validation-0000066",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "div2k-0001",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "lsdir-train-0000001",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "div2k-0801",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "lsdir-validation-0000066",
+        "finite": true
+      }
+    ]
+  },
+  "loading_validation": {
+    "training_executed": false,
+    "optimizer_steps": 0,
+    "gpu_work_executed": false,
+    "checks": [
+      {
+        "scale": 2,
+        "scenes": [
+          "div2k-0001",
+          "lsdir-train-0000001"
+        ],
+        "prediction_shape": [
+          2,
+          3,
+          96,
+          96
+        ],
+        "finite_cpu_forward": true,
+        "serial_threaded_patch_bytes_identical": true,
+        "config_sha256": "6cfc40a64db2c5abce5a165a0c73aa338418791cfa6e4d4cb954e335a55f3084",
+        "manifest_sha256": "6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9"
+      },
+      {
+        "scale": 4,
+        "scenes": [
+          "div2k-0001",
+          "lsdir-train-0000001"
+        ],
+        "prediction_shape": [
+          2,
+          3,
+          128,
+          128
+        ],
+        "finite_cpu_forward": true,
+        "serial_threaded_patch_bytes_identical": true,
+        "config_sha256": "6aaf5f496bb75ac4e6e9092ad4e1c569dd58bd1594b7947bb433c5f9033b7115",
+        "manifest_sha256": "6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9"
+      }
+    ]
+  },
+  "previous_stop_superseded_by": "alr u can start next traiing run for the super resolution",
+  "launch_approval_record": "runs/approved-sr-plan.json",
+  "approval_recorded_utc": "2026-10-19T05:50:42.447234-04:00",
+  "loading_benchmark": "runs/loader-benchmark.json",
+  "scheduled_resume_validation": {
+    "tests_passed": 14,
+    "torch_imported": false,
+    "training_executed": false,
+    "hard_cutoff_watchdog_tested": true,
+    "updated_utc": "2026-10-19T22:37:58.206778-04:00",
+    "approved_start_tested": "11 PM October 19 Eastern",
+    "explicit_immediate_start_gate_tested": true
+  },
+  "extension_validation": {
+    "tests_passed": 28,
+    "torch_imported": false,
+    "current_training_restarted": false,
+    "validated_utc": "2026-10-26T01:09:23.328417-04:00",
+    "explicit_430_deadline_tested": true,
+    "one_hour_deadline_tested": true,
+    "confirmed_wednesday_deadline_tested": true,
+    "monday_4pm_deadline_tested": true
+  },
+  "throughput_profile_validation": {
+    "loader_tests_passed": 22,
+    "training_executed_by_tests": false,
+    "resume_samples_order_rng_identical": true,
+    "report": "runs/throughput-oct21-benchmark.json",
+    "selected_profile": "high",
+    "decoder_threads": 4,
+    "prefetch_batches": 4,
+    "cpu_threads": 4
+  },
+  "priority_resume_validation": {
+    "tests_passed": 27,
+    "torch_imported": false,
+    "training_executed_by_tests": false,
+    "sunday_morning_11am_deadline_tested": true,
+    "validated_utc": "2026-10-25T02:09:55.90982-04:00"
+  },
+  "stopped_utc": "2026-10-22T20:41:44.7765562Z",
+  "fresh_approval_record": "runs/monday-x4-20261026-plan.json",
+  "user_stop_requested": true
+}

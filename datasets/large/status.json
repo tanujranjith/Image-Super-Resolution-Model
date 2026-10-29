@@ -1,0 +1,38 @@
+{
+  "phase": "data_prepared",
+  "training_started": false,
+  "kaggle_ref": "parampandya0310/hr-image-denoising-lsdir",
+  "kaggle_version": 1,
+  "acquired_scenes": 30250,
+  "verified_lsdir_scenes": 30250,
+  "primary_splits": {
+    "train": 30749,
+    "val": 50,
+    "test": 100
+  },
+  "primary_training_sources": {
+    "div2k": 750,
+    "lsdir-kaggle": 29999
+  },
+  "lsdir_heldout_splits": {
+    "val": 125,
+    "test": 125
+  },
+  "distinct_retained_scenes": 31149,
+  "duplicate_groups": 31136,
+  "excluded_scenes": 1,
+  "exclusion_reasons": {
+    "byte-identical duplicate": 1
+  },
+  "training_manifest_sha256": "6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9",
+  "heldout_manifest_sha256": "542510b9f0943b2a1b4b568bb50c17ac6c8ced935160e69248cc47de17005f32",
+  "original_div2k_manifest_sha256": "184255cb609a3de216c7a5d0ccbe947982ea16a9ed1d8571fb5626d225769569",
+  "raw_hr_bytes": 56640253584,
+  "condition": "pillow-bicubic-synthetic",
+  "checks": {
+    "whole_scene_groups_isolated": true,
+    "official_lsdir_validation_not_used_for_training": true,
+    "original_manifests_unmodified": true
+  },
+  "limitations": "Exact/full/mirror perceptual hashes cannot prove absence of arbitrary crops or repeated scenes. New data is clean HR with synthetic bicubic LR, not real camera LR. Kaggle mirror license does not override original academic research terms. Mirror validation provenance is not independently authenticated; it is not an official hidden-test benchmark."
+}

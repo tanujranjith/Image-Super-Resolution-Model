@@ -1,0 +1,62 @@
+{
+  "implementation": "complete",
+  "validation": "passed",
+  "tests_passed": 80,
+  "training": "complete",
+  "approval_required": true,
+  "publication": "not_started",
+  "trained_weights_present": true,
+  "ui_design": "selected option 3 dark workbench",
+  "ui_validation": "passed",
+  "ui_tests_passed": 3,
+  "large_dataset": {
+    "status": "ready_for_training_approval",
+    "readiness": "datasets/large/readiness.json",
+    "unique_training_hr": 30749,
+    "training_started": false
+  },
+  "historical_conditional_approval": {
+    "car_must_complete_before": "2026-10-17T05:00:00-04:00",
+    "local_deadline": "5 AM Eastern on October 17, 2026",
+    "scope": "EDSR-style 2x then 4x sequentially after car completion; otherwise do not start",
+    "publication": false,
+    "outcome": "expired_unused"
+  },
+  "future_training": "No automatic restart; new explicit human approval required for any additional training.",
+  "tests_skipped": 1,
+  "approval_scope": "Both scales completed 60 epochs. User requested pause after completion; no new training authorized.",
+  "loading_optimization": {
+    "status": "validated_ready_for_explicitly_approved_launch",
+    "report": "runs/loader-optimization-status.json",
+    "documentation": "LOADING.md",
+    "core_tests_passed": 19,
+    "extended_validation_pending": false,
+    "tests_passed": 80,
+    "benchmark": "runs/loader-benchmark.json"
+  },
+  "launch_approval_record": "runs/monday-x4-20261026-plan.json",
+  "supervisor_status": "D:\\Desktop\\Engineering\\Coding\\Active projects\\ML projects\\Image Super-Resolution Model\\runs\\overnight-20261026-010926\\status.json",
+  "completed_scales": [
+    2,
+    4
+  ],
+  "continuation": {
+    "phase": "approved_immediate_launch",
+    "start_at_utc": "2026-10-19T22:37:58.206778-04:00",
+    "status": "runs/scheduled-sr-current.json",
+    "preserved_baseline": "runs/pre-continuation-20261019-215011",
+    "previous_daytime_cutoff_removed": true,
+    "hard_stop_utc": "2026-10-20T15:30:00-04:00",
+    "hard_stop_local": "Tuesday October 20, 2026, 3:30 PM America/Indianapolis",
+    "evaluation_reserve_hours": 2,
+    "start_local": "2026-10-19T22:37:58.206778-04:00 America/Indianapolis - explicit immediate start",
+    "automatic_launch_enabled": false,
+    "explicit_start_approval": "Start the run"
+  },
+  "approved_extension": {
+    "plan": "runs/monday-x4-20261026-plan.json",
+    "status": "runs/monday-x4-current.json",
+    "hard_stop_utc": "2026-10-26T16:00:00-04:00"
+  },
+  "stopped_utc": "2026-10-22T20:41:44.7765562Z"
+}

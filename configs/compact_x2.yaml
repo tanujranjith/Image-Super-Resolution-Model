@@ -1,0 +1,23 @@
+architecture: compact
+scale: 2
+features: 32
+blocks: 4
+patch_size: 48
+batch_size: 16
+workers: 0
+repeats: 20
+epochs: 40
+lr: 0.0002
+loss: l1
+perceptual_weight: 0.0
+degradation: bicubic
+amp: true
+patience: 10
+checkpoint_every: 5
+tile_size: 128
+seed: 42
+device: cuda
+manifest: datasets/processed/div2k.json
+output: runs/compact-x2-seed42
+
+

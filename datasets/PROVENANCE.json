@@ -1,0 +1,16 @@
+{
+  "scenes": 900,
+  "pairs": 1800,
+  "counts": {
+    "x2/train": 750,
+    "x4/train": 750,
+    "x2/val": 50,
+    "x4/val": 50,
+    "x2/test": 100,
+    "x4/test": 100
+  },
+  "condition": "div2k-official-bicubic",
+  "manifest_sha256": "184255cb609a3de216c7a5d0ccbe947982ea16a9ed1d8571fb5626d225769569",
+  "scene_split_isolation": true,
+  "test_protocol": "official validation HR 0801-0900 held out as local test; challenge test HR unavailable"
+}

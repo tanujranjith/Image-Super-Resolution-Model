@@ -1,0 +1,11 @@
+# Declared experiments
+
+Large-data alternative: `edsr_large_x2.yaml` and `edsr_large_x4.yaml` train separately on retained Kaggle LSDIR HR plus protected DIV2K training scenes, with Pillow-generated LR. `repeats: 1` gives one random patch per unique training scene each epoch. Validation selection uses filtered DIV2K internal validation under the same synthetic condition. After training, report the main synthetic held-out set, the pinned original provided DIV2K test pairs, and pinned Kaggle LSDIR held-out test separately. A manifest override requires `--benchmark` and a matching fingerprint in the saved checkpoint configuration. Original training provenance must still match. No scores or quality claims exist for these pending runs.
+
+For each scale: bicubic, compact residual, EDSR-style. Use identical provided LR/HR pairs and manifest SHA256. Seed42 first, additional seeds only with approval. Select checkpoints on internal validation IDs0751:0800; official validation IDs0801:0900 are this project's local held-out test. Do not claim challenge-test results. Keep metrics and visual comparison outputs with checkpoint hash.
+
+Separate experiments: HR-only Pillow bicubic, realistic-synthetic blur/noise/JPEG, RealSR-v3. Never pool scores or compare against MATLAB-bicubic literature without disclosing degradation differences. Optional perceptual loss is separately labeled and can trade PSNR for texture. No claim of recovering factual missing detail.
+
+Artifact review: inspect highest-MAE/lowest-PSNR scenes, tile boundaries, ringing at edges, oversmoothing, texture repetition, text distortions, clipped highlights and color shifts. Compare against HR and bicubic, including crops with exact coordinates. Record failure scene IDs. RealSR requires manual registration review before quantitative evaluation. Public examples should be user-owned images; no fabricated enhanced examples.
+
+References: EDSR authors' implementation https://github.com/sanghyun-son/EDSR-PyTorch ; Wang et al. SSIM https://ece.uwaterloo.ca/~z70wang/research/ssim/ ; Zhang et al. LPIPS https://github.com/richzhang/PerceptualSimilarity . The default compact models are original reduced-size implementations, not published EDSR benchmark reproductions. superres.compare aggregates only actual reports with matching scale, condition, split and manifest.

@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "independent_exact_and_phash_split_isolation": true,
+    "acquired_file_size_and_mtime_unchanged_since_crc_sha_decode_checks": true,
+    "official_validation_excluded_from_training": true,
+    "both_scales_pair_geometry_and_scene_identity": true,
+    "original_div2k_manifest_unchanged": true,
+    "cpu_actual_hr_forward_passes": [
+      {
+        "scale": 2,
+        "scene": "div2k-0001",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "lsdir-train-0000001",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "div2k-0801",
+        "finite": true
+      },
+      {
+        "scale": 2,
+        "scene": "lsdir-validation-0000066",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "div2k-0001",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "lsdir-train-0000001",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "div2k-0801",
+        "finite": true
+      },
+      {
+        "scale": 4,
+        "scene": "lsdir-validation-0000066",
+        "finite": true
+      }
+    ]
+  },
+  "training_started": false,
+  "audit_sha256": "e9ad8d12ad5e167997f733647c53a333dcc3c9724bb76cb4d86f97c7de5503b2"
+}

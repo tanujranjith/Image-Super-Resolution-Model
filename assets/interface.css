@@ -1,0 +1,101 @@
+@font-face{font-family:Inter;src:url("__FONT_URL__") format("truetype");font-weight:100 900;font-display:swap}
+:root{color-scheme:dark}
+html,body,gradio-app{background:#111416!important}
+.gradio-container{--body-background-fill:#111416;--background-fill-primary:#171b1e;--background-fill-secondary:#1d2429;--block-background-fill:#171b1e;--block-border-color:#2a343c;--border-color-primary:#2a343c;--border-color-accent:#43839a;--body-text-color:#e9f0f5;--block-label-text-color:#b8c8d5;--body-text-color-subdued:#a5b8c8;--input-background-fill:#1b2227;--input-border-color:#374650;--input-text-color:#e9f0f5;--button-secondary-background-fill:#20272c;--button-secondary-background-fill-hover:#2c3740;--button-secondary-text-color:#d3e1eb;--button-secondary-border-color:#3c4c58;--button-primary-background-fill:var(--accent);--button-primary-background-fill-hover:var(--accent-hover);--button-primary-text-color:#061b21;--button-primary-border-color:var(--accent);--checkbox-background-color:#1b2227;--checkbox-border-color:#6c8594;--checkbox-background-color-selected:var(--accent);--checkbox-label-background-fill:#171b1e;--checkbox-label-text-color:#d3e1eb;--checkbox-label-background-fill-selected:#25363a;--checkbox-label-text-color-selected:#e8fffa;--block-title-text-color:#d9e5ef;--block-label-background-fill:#1b2227;--panel-background-fill:#171b1e;--color-accent:var(--accent);--radius-lg:8px;--radius-md:6px;max-width:1440px!important;padding:24px 32px 40px!important;margin:auto!important;background:#111416!important;color:#e9f0f5!important;font-family:Inter,system-ui,sans-serif!important}
+.gradio-container *{font-family:inherit}
+.gradio-container a{color:var(--accent)}
+.app-header{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:40px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:16px;line-height:1.3}
+.brand>span{font-size:24px;font-weight:650;letter-spacing:-.6px}
+.brand small{font-size:12px;color:#a8bac9;margin-left:4px;font-weight:400}
+.ui-icon{width:28px;height:28px;object-fit:contain;filter:brightness(0) saturate(100%) invert(86%) sepia(24%) saturate(912%) hue-rotate(152deg)}
+.app-header nav{display:flex;gap:30px;font-size:13px}
+.app-header nav a{text-decoration:none!important;color:#b6c8d8!important}
+.app-header nav a:hover{color:var(--accent)!important}
+.status-strip{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:50px;padding:12px 20px;border:1px solid #325362;border-radius:7px;background:#192831;color:#83dcf6;font-size:12px;line-height:1.6}
+.status-strip strong{font-size:12px;letter-spacing:1px;font-weight:700;flex-shrink:0}
+.status-strip span{font-size:12px;text-align:right}
+.page-heading{padding:28px 0 10px}
+.page-heading h1{font-size:28px;line-height:1.35;font-weight:650;letter-spacing:-.55px;margin:0 0 8px;color:#edf4fa}
+.page-heading p{font-size:15px;line-height:1.6;color:#b0c4d4;margin:0}
+#car-workspace,#sr-workspace{gap:26px;margin-top:12px;align-items:flex-start}
+#photo-column,#comparison-column{gap:12px}
+#vehicle-image,#comparison-slider{border:1px solid #29343c;border-radius:7px;overflow:hidden;background:#151a1d}
+#vehicle-image img{object-fit:cover!important}
+#identity-panel,#tools-panel{background:#171b1e;border:1px solid #2a343b;border-radius:8px;padding:24px!important;gap:20px}
+.panel-heading{display:flex;align-items:center;gap:12px;font-size:21px!important;line-height:1.4;font-weight:600;margin:0}
+.panel-heading .ui-icon{width:26px;height:26px}
+.identity-fields{margin:0!important}
+.identity-fields>div{display:grid;grid-template-columns:45% 55%;gap:8px;padding:10px 0;font-size:14px;line-height:1.5}
+.identity-fields dt{color:#b8cad9}
+.identity-fields dd{margin:0;color:#edf5fa;overflow-wrap:anywhere}
+.identity-note{border-top:1px solid #2a3944;margin:22px 0 0;padding-top:20px;font-size:12px;color:#b5c8d8;line-height:1.7}
+#candidates-panel{border:none;border-top:1px solid #2a3944;border-radius:0;background:transparent;padding-top:14px}
+#candidates-panel button{padding:6px 0}
+.candidate-list{list-style:none;margin:0!important;padding:0!important}
+.candidate-list li{display:flex;align-items:center;gap:14px;min-height:50px;border-bottom:1px solid #2a3944;font-size:12px;color:#c5d6e4;padding:8px 0}
+.candidate-list .rank{color:#93acbf;min-width:16px}
+.candidate-name{flex:1;overflow-wrap:anywhere}
+#attention-toggle{background:transparent;border:0;padding:4px 0}
+#attention-toggle label{background:transparent;border:0;padding:8px 0}
+button.primary{font-weight:600!important;min-height:54px;font-size:15px!important;border-radius:6px!important}
+button img{width:20px!important;height:20px!important}
+button.secondary img{filter:invert(.8)}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent)!important;outline-offset:4px!important}
+.photo-actions{gap:16px}
+.photo-actions button{min-width:120px!important;flex:none!important;background:transparent!important;border-color:transparent!important;justify-content:flex-start!important;padding:10px 4px!important;color:#b6cbdc!important;font-size:13px!important}
+.panel-footnote,.asset-caption{font-size:11px;color:#94aabd;line-height:1.7;margin:0}
+.asset-caption{margin-top:-6px}
+#model-details,#full-output{margin-top:18px;border-color:#2a343c;background:transparent}
+.about-section{border-top:1px solid #2a343c;margin-top:24px;padding-top:28px;color:#9fb5c6}
+.about-section h2{font-size:18px;font-weight:600;color:#d9e6ef;margin:0 0 12px}
+.about-section p{font-size:12px;line-height:1.8;max-width:1000px;margin:8px 0}
+.tool-heading{font-size:14px;font-weight:600;margin:0}
+#input-image{border:1px solid #35464f;border-radius:5px;background:#151a1d}
+#input-image img{object-fit:cover!important}
+#scale-control{background:transparent;border:0;padding:0;margin:8px 0}
+#scale-control .wrap{display:flex;flex-wrap:nowrap;gap:12px}
+#scale-control label{flex:1;justify-content:center;min-height:48px;cursor:pointer;border-radius:5px!important}
+#scale-control input[type=radio]{position:absolute;opacity:0}
+#scale-control label:has(input:checked){border-color:var(--accent)!important;background:#1b2e2b!important;color:#c8ffed!important}
+#scale-control label:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+#download-button{min-height:50px}
+#download-button[disabled]{opacity:.55;cursor:not-allowed}
+#comparison-column{position:relative}
+#comparison-notice{position:absolute!important;bottom:32px;left:0;right:0;width:100%;pointer-events:none;text-align:center}
+.comparison-note{display:inline-block;margin:0;padding:10px 16px;border:1px solid #49616d;border-radius:5px;background:#14232df2;color:#e1f1fc;font-size:12px;line-height:1.4;max-width:90%}
+.dimension-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 8px;border-top:1px solid #2c3942;font-size:12px;color:#b1c7d8;line-height:1.6}
+.dimension-strip strong{font-weight:500;color:#e0edf7}
+.uncertain{color:#d6e8f3;font-size:14px;line-height:1.7}
+#sample-photo{font-size:12px}
+footer{display:none!important}
+@media(max-width:900px){.gradio-container{padding:20px!important}.brand>span{font-size:20px}.brand small{display:none}.status-strip{align-items:flex-start;flex-direction:column;gap:4px}.status-strip span{text-align:left}.page-heading h1{font-size:25px}#car-workspace,#sr-workspace{flex-direction:column}#photo-column,#identity-panel,#tools-panel,#comparison-column{width:100%!important;min-width:0!important}#vehicle-image,#comparison-slider{height:480px!important}#input-image{height:220px!important}.app-header nav{gap:14px;font-size:11px}}
+@media(max-width:500px){.gradio-container{padding:16px!important}.app-header{align-items:flex-start;flex-direction:column;gap:14px;margin-bottom:18px}.brand{gap:10px}.brand>span{font-size:20px}.status-strip{padding:12px;font-size:11px}.status-strip strong{font-size:10px;letter-spacing:.6px}.status-strip span{font-size:11px}.page-heading{padding-top:18px}.page-heading h1{font-size:23px}.page-heading p{font-size:13px}#identity-panel,#tools-panel{padding:20px!important}#vehicle-image,#comparison-slider{height:300px!important}.dimension-strip{flex-direction:column;align-items:flex-start;gap:6px;padding:14px 0}.comparison-note{font-size:10px;padding:8px 10px}.asset-caption{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root{--accent:#83eacb;--accent-hover:#a5f7df}
+.status-strip{border-color:#315e54;background:#192a27;color:#a0f0db}
+.ui-icon{filter:brightness(0) saturate(100%) invert(89%) sepia(17%) saturate(618%) hue-rotate(101deg)}
+
+
+/* Remove stock Gradio padding so the workbench follows the selected layout. */
+.gradio-container{width:100%!important}
+.gradio-container main{padding:0!important}
+.gradio-container .html-container{padding:0!important}
+.gradio-container .block{box-shadow:none!important}
+.gradio-container .prose li{margin:0!important}
+#identity-panel{gap:14px}
+#candidates-panel{border:0!important;border-top:1px solid #2a3944!important;padding:12px 0 0!important;overflow:visible}
+.candidate-list li{min-height:40px}
+.identity-fields>div{padding:8px 0}
+.identity-note{margin-top:16px;padding-top:16px}
+.app-header{margin-bottom:0}
+.page-heading{padding:8px 0 0}
+#car-workspace,#sr-workspace{margin-top:4px}
+
+.identity-fields>div{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+#identity-output{overflow:visible!important}
+.status-strip strong,.status-strip span{color:var(--accent)!important}
+#attention-toggle label,#attention-toggle .wrap{background:transparent!important}
+#scale-control{background:transparent!important}
+#comparison-slider img.preview{height:100%!important;max-height:none!important;width:100%!important;object-fit:contain!important}
+#comparison-notice{z-index:15;overflow:visible!important}

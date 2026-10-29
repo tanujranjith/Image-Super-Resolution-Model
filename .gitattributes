@@ -1,0 +1,4 @@
+*.safetensors binary
+# Preserve the exact exported bytes used by checksums.json on every platform.
+/artifacts/x2/config.json -text whitespace=cr-at-eol
+/artifacts/x4/config.json -text whitespace=cr-at-eol
