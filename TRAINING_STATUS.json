@@ -35,7 +35,7 @@
     "benchmark": "runs/loader-benchmark.json"
   },
   "launch_approval_record": "runs/monday-x4-20261026-plan.json",
-  "supervisor_status": "D:\\Desktop\\Engineering\\Coding\\Active projects\\ML projects\\Image Super-Resolution Model\\runs\\overnight-20261026-010926\\status.json",
+  "supervisor_status": "runs/<run-id>/status.json",
   "completed_scales": [
     2,
     4

@@ -27,3 +27,8 @@ dist/
 *.log
 design/*.pid
 .env
+
+# Generated local validation reports can contain host names or paths.
+validation-environment.json
+validation-*.xml
+datasets/large/validation-*.xml
