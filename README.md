@@ -1,6 +1,6 @@
 # Image Super-Resolution Model
 
-An independent local 2×/4× neural reconstruction project with compact residual and EDSR-style networks, original PyTorch training/inference code, official DIV2K pair validation and measured evaluation. **Both scales completed 60 training epochs. Trained weights, configurations, checksums and evaluation reports are included in this repository.**
+An independent local 2×/4× neural reconstruction project with compact residual and EDSR-style networks, original PyTorch training/inference code, official DIV2K pair validation and measured evaluation. **The recorded run status reports 60 completed training epochs per scale. Trained weights, configurations, checksums and saved evaluation reports are included in this repository.**
 
 The interface follows the selected dark workbench design: mint controls, an input tool panel and a large draggable comparison canvas. Run `app.py` and open http://127.0.0.1:7861. Upload an image and select 2× or 4× to generate a learned reconstruction and download a PNG. Changing the image or scale clears old results. Model imports are lazy to keep the preview light. See [design QA](design-qa.md) and [asset provenance](assets/README.md).
 
@@ -15,7 +15,7 @@ Each scale uses its validation-selected checkpoint from the completed 60-epoch r
 
 ## Setup and use
 
-**Training data:** the included models were trained on 30,749 unique HR scenes from DIV2K and the additional Kaggle LSDIR corpus, documented in [datasets/large/README.md](datasets/large/README.md). Large configs use one repeat and separate run directories; the older DIV2K-only defaults below remain reproducible. No dataset download or training is needed to use the included weights. No additional training starts without approval.
+**Recorded training provenance:** the included model configurations reference the large-data manifest documented as 30,749 unique HR scenes from DIV2K and the additional Kaggle LSDIR corpus in [datasets/large/README.md](datasets/large/README.md). The exported metadata pins the manifest hash; the underlying local corpus and full run logs are not included for independent reproduction. Large configs use one repeat and separate run directories; the older DIV2K-only defaults below remain reproducible. No dataset download or training is needed to use the included weights. No additional training starts without approval.
 
 Python 3.12 with a project-owned `.venv`; reference machine Windows 11 and RTX 3060 12 GiB.
 
@@ -43,7 +43,7 @@ Separate configs/checkpoints for each scale; no automatic multi-run launch. Defa
 
 RTX 3060 planning defaults: EDSR x2 LR48 patches/batch12; x4 LR32/batch8. Expect roughly 2–6 GiB VRAM plus display allocation; actual backward-pass peaks are unmeasured pending approval. Lower batch/patch sizes if needed and use a new run directory. Tiled validation/inference uses a conservative LR halo covering all convolutions, crops tile edges and assembles on CPU. GPU memory depends on tile size rather than full output size; output capped at 16 MP (approximately 192 MB float RGB, plus display/encoding copies in host RAM).
 
-Budget **6–18 hours per scale** for 60 epochs as a provisional estimate, strongly dependent on PNG decode and full-image validation; measure first approved epoch before planning overnight completion. There are 15,000 sampled training patches per epoch under the default repeat count. No training timing is claimed. Budget 20–35 GB for archives/extracted pairs and several GB for experiment history. Windows uses zero workers by default to avoid duplicating Python/Torch memory. Increase to two workers only if free RAM and decoding measurements justify it. Background launch records PID/stdout/stderr and survives the coding agent. Checkpoints recover the last completed epoch including optimizer/scheduler/scaler/RNG state; incomplete epochs replay. Keep PC awake manually; scripts never change power settings.
+For a future reproduction of the smaller DIV2K-only defaults, budget **6–18 hours per scale** for 60 epochs as a provisional estimate, strongly dependent on PNG decode and full-image validation; measure first approved epoch before planning overnight completion. There are 15,000 sampled training patches per epoch under the default repeat count. This is a planning estimate, not a measurement of the completed large-data runs. Budget 20–35 GB for archives/extracted pairs and several GB for experiment history. Windows uses zero workers by default to avoid duplicating Python/Torch memory. Increase to two workers only if free RAM and decoding measurements justify it. Background launch records PID/stdout/stderr and survives the coding agent. Checkpoints recover the last completed epoch including optimizer/scheduler/scaler/RNG state; incomplete epochs replay. Keep PC awake manually; scripts never change power settings.
 
 ## Evaluate and export
 
