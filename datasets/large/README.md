@@ -1,6 +1,10 @@
 # Large Kaggle HR corpus
 
-Preparation only. No super-resolution training or model outputs have been produced.
+## Current artifact status
+
+The repository now includes x2 and x4 trained exports and saved evaluation reports in [artifacts/](../../artifacts/README.md). Both exported configurations reference `datasets/large/processed/training.json`, manifest SHA-256 `6b8726365559e9f72b8e944e6b59464b16e1799d852e3a379b1006907f36afa9`, with selected checkpoint epochs 59 (x2) and 57 (x4). The run status records completion of 60 epochs per scale; the selected epoch is not the total run length.
+
+The preparation/readiness information below describes the earlier data-preparation and launch workflow. In particular, `training_started: false` in historical readiness/preparation records must not be read as proof that the included exports do not exist. Those records are also not permission to launch another run. Full local run logs and optimizer checkpoints are not included, so repository inspection alone cannot independently reproduce the complete training history or revalidate the local corpus. Any new training still requires explicit approval.
 
 ## Source and rights
 
@@ -52,7 +56,7 @@ Both scales and all variants of a component stay in one split. Exact new copies 
 
 Clean HR photos become LR/HR pairs through scale-aligned **Pillow bicubic** downsampling. Training selects a random patch coordinate, downsamples a context-padded HR crop, and removes the context; tests verify exact agreement with cropping full-image downsampling. LR/HR augmentations are joint. Evaluation is deterministic, without training augmentation. Pillow bicubic, provided DIV2K MATLAB bicubic, realistic synthetic noise/JPEG and RealSR camera pairs are distinct conditions. This corpus contains no real camera LR/HR pairs.
 
-`configs/edsr_large_x2.yaml` and `edsr_large_x4.yaml`: separate EDSR-style networks, 48 features/8 blocks, L1/Adam, AMP, cosine scheduling, validation early stopping, periodic checkpoints and optimizer/scaler/RNG recovery. One repeat gives one random patch per training scene per epoch, roughly 30,000 patches versus the old 15,000-patch budget. More scenes do not automatically establish better restoration; quality and timing remain unmeasured.
+`configs/edsr_large_x2.yaml` and `edsr_large_x4.yaml`: separate EDSR-style networks, 48 features/8 blocks, L1/Adam, AMP, cosine scheduling, validation early stopping, periodic checkpoints and optimizer/scaler/RNG recovery. One repeat gives one random patch per training scene per epoch, roughly 30,000 patches versus the old 15,000-patch budget. More scenes do not automatically establish better restoration. Saved evaluation results for the included exports are in `artifacts/x2/evaluation.json` and `artifacts/x4/evaluation.json`; future-run quality and timing are not guaranteed by these historical results.
 
 Windows uses zero DataLoader workers and four CPU math threads. x2: LR48/batch12; x4: LR32/batch8. Plan roughly 2–6 GiB GPU memory; measure actual backward peaks after approval. A provisional **12–36 hours per scale** accounts for HDD decoding, twice the sample budget and full-image validation. This is not a benchmark or overnight-completion promise. Replace it with first-epoch measurements after approval. Additional benchmarks run once after training. Scales run sequentially.
 

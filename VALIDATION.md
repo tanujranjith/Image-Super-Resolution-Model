@@ -1,4 +1,6 @@
-# Technical validation — 2026-10-15
+# Historical pre-training validation — 2026-10-15
+
+This document records the October 15 pre-training checks, not the current training/artifact status. The repository subsequently added trained x2/x4 exports and saved evaluations; see [artifacts/README.md](artifacts/README.md). Statements below that training/publication had not started describe that historical checkpoint only. They do not certify current hosting, reproduce training, or authorize another run.
 
 **Status: implemented and validated for the first approved local training run. Training and publication have not started.**
 
