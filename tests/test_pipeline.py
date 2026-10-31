@@ -175,8 +175,21 @@ def test_ui_constructs_and_missing_input():
     assert build_app().config["components"]
     with pytest.raises(Exception, match="Upload"):
         enhance(None, 2)
-    with pytest.raises(Exception, match="not available"):
-        enhance(Image.new("RGB", (32, 32)), 2)
+
+
+@pytest.mark.parametrize("scale", [2, 4])
+def test_ui_missing_weights_uses_isolated_artifact_directory(tmp_path, monkeypatch, scale):
+    # The repository now ships real exports. Never make this negative-path test
+    # depend on their absence or on a model cached by another test.
+    from app import enhance, upscaler
+
+    monkeypatch.setenv("SR_ARTIFACTS", str(tmp_path / "missing-models"))
+    upscaler.cache_clear()
+    try:
+        with pytest.raises(Exception, match="not available"):
+            enhance(Image.new("RGB", (32, 32)), scale)
+    finally:
+        upscaler.cache_clear()
 
 
 def test_cuda_forward_only():
